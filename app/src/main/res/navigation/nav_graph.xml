@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/quranHomeFragment">
+
+    <fragment
+        android:id="@+id/learningQuranFragment"
+        android:name="com.example.quranapp.fragments.LearningQuranFragment"
+        android:label="fragment_learning_quran"
+        tools:layout="@layout/fragment_learning_quran" >
+        <action
+            android:id="@+id/action_learningQuranFragment_to_surahDetails"
+            app:destination="@id/learningSurahDetailsFragment"
+            app:popUpTo="@id/learningQuranFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AzkarHomeFragment"
+        android:name="com.example.quranapp.fragments.AzkarHomeFragment"
+        android:label="fragment_azkar_home"
+        tools:layout="@layout/fragment_azkar_home" >
+        <action
+            android:id="@+id/action_AzkarHomeFragment_to_azkarListFragment2"
+            app:destination="@id/azkarListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/qiblaFragment"
+        android:name="com.example.quranapp.fragments.QiblaFragment"
+        android:label="fragment_qibla"
+        tools:layout="@layout/fragment_qibla" />
+    <fragment
+        android:id="@+id/prayerTimesFragment"
+        android:name="com.example.quranapp.fragments.PrayerTimesFragment"
+        android:label="fragment_prayer_times"
+        tools:layout="@layout/fragment_prayer_times" >
+        <action
+            android:id="@+id/action_prayerTimesFragment_to_prayerCityPickerFragment"
+            app:destination="@id/prayerCityPickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/learningSurahDetailsFragment"
+        android:name="com.example.quranapp.fragments.LearningSurahDetailsFragment"
+        android:label="fragment_learning_surah_details"
+        tools:layout="@layout/fragment_learning_surah_details" />
+    <fragment
+        android:id="@+id/prayerCityPickerFragment"
+        android:name="com.example.quranapp.fragments.PrayerCityPickerFragment"
+        android:label="fragment_prayer_city_picker"
+        tools:layout="@layout/fragment_prayer_city_picker" />
+    <fragment
+        android:id="@+id/misbahaFragment"
+        android:name="com.example.quranapp.fragments.MisbahaFragment"
+        android:label="fragment_misbaha"
+        tools:layout="@layout/fragment_misbaha" />
+    <fragment
+        android:id="@+id/azkarListFragment"
+        android:name="com.example.quranapp.fragments.AzkarListFragment"
+        android:label="fragment_azkar_list"
+        tools:layout="@layout/fragment_azkar_list" >
+
+        <argument
+            android:name="azkarType"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/quranHomeFragment"
+        android:name="com.example.quranapp.fragments.QuranHomeFragment"
+        android:label="fragment_quran_home"
+        tools:layout="@layout/fragment_quran_home" >
+        <action
+            android:id="@+id/action_quranHomeFragment_to_learningQuranFragment"
+            app:destination="@id/learningQuranFragment" />
+        <action
+            android:id="@+id/action_quranHomeFragment_to_readingQuranFragment"
+            app:destination="@id/quranIndexFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quranIndexFragment"
+        android:name="com.example.quranapp.fragments.QuranIndexFragment"
+        android:label="fragment_quran_index"
+        tools:layout="@layout/fragment_quran_index" >
+        <action
+            android:id="@+id/action_quranIndex_to_quranFragment"
+            app:destination="@id/quranFragment" />
+        <action
+            android:id="@+id/action_quranIndexFragment_to_quranSearchFragment"
+            app:destination="@id/quranSearchFragment" />
+        <action
+            android:id="@+id/action_quranIndexFragment_to_quranSearchFragment2"
+            app:destination="@id/quranSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quranSearchFragment"
+        android:name="com.example.quranapp.fragments.QuranSearchFragment"
+        android:label="@string/quran_search"
+        tools:layout="@layout/fragment_quran_search">
+        <action
+            android:id="@+id/action_quranSearchFragment_to_quranFragment"
+            app:destination="@id/quranFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quranFragment"
+        android:name="com.example.quranapp.fragments.QuranContainerFragment"
+        android:label="@string/holy_quran"
+        tools:layout="@layout/fragment_page_quran">
+        <argument
+            android:name="startPage"
+            app:argType="integer" />
+    </fragment>
+</navigation>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".fragments.PrayerTimesFragment">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardCornerRadius="10dp"
+          app:cardElevation="4dp"
+          android:layout_margin="10dp"
+
+          >
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/rl"
+              app:backgroundTint="@null"
+              android:background="@color/light_palette"
+              >
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:id="@+id/linear"
+              android:padding="8dp"
+              >
+
+              <TextView
+                  android:textSize="18sp"
+                  android:id="@+id/cities"
+                  android:text="القاهرة"
+                  android:layout_width="0dp"
+                  android:textStyle="bold"
+                  android:gravity="center"
+                  android:textColor="@color/dark_palette"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="2"
+                  />
+              <Button
+                  android:textSize="18sp"
+                  android:id="@+id/btn_select_your_city"
+                  android:text="اختار مدينتك"
+                  android:layout_width="40dp"
+                  android:layout_weight="1"
+                  android:layout_height="40dp"
+                  android:shadowRadius="64"
+                  android:textColor="@color/white"
+                  app:backgroundTint="@null"
+                  android:background="@color/mid_palette"
+                  />
+
+
+          </LinearLayout>
+
+              <DatePicker
+                  android:id="@+id/date"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_below="@id/linear"
+                  app:backgroundTint="@null"
+                  android:calendarTextColor="@color/dark_palette"
+                  android:calendarViewShown="false"
+                  android:datePickerMode="spinner"
+                  android:scaleX="1.2"
+                  android:scaleY="1.2"
+                  android:theme="@style/NumberPickerStyle" />
+          </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/prayers_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            tools:listitem="@layout/list_item_prayer" />
+
+    </LinearLayout>
+</ScrollView>

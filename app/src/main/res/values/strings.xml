@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Quran App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+        <string name="menu_quran">القرآن الكريم</string>
+        <string name="to">الى</string>
+        <string name="aya_no">آية رقم</string>
+        <string name="menu_azkar">أذكار</string>
+        <string name="from_page">من صفحة</string>
+        <string name="sora">سورة</string>
+        <string name="jozz">جزء</string>
+        <string name="page">صفحة</string>
+        <string name="holy_quran">القرآن الكريم</string>
+        <string name="quran_index">فهرس المصحف</string>
+        <string name="quran_search">بحث في المصحف</string>
+</resources>

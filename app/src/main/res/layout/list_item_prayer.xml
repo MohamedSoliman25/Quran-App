@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    android:background="@color/white"
+    app:cardElevation="@dimen/cardview_default_radius"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:background="@color/light_palette"
+        >
+
+            <ImageView
+                android:id="@+id/img_prayer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/dhur"
+                android:layout_centerVertical="true"
+                android:padding="6dp"
+                />
+
+        <TextView
+            android:id="@+id/prayer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الفجر"
+            android:layout_toLeftOf="@id/img_prayer"
+            android:textColor="@color/dark_palette"
+            android:textStyle="bold"
+            android:layout_marginEnd="6dp"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prayer_time"
+            android:text="5:30"
+            android:textSize="18sp"
+            android:textColor="@color/dark_palette"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="100dp"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

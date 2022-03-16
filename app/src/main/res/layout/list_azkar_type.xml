@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="24dp"
+        app:cardBackgroundColor="@color/light_palette"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="24sp"
+                android:gravity="center"
+                android:id="@+id/zekr_name"
+                android:text="zekr type"
+                android:textColor="@color/dark_palette"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+

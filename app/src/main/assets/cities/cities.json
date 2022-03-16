@@ -1,0 +1,627 @@
+[
+  {
+    "country": "EG",
+    "name": "Sheikh Zayed ",
+    "arabicName": "الشيخ زايد"
+  },
+  {
+    "country": "EG",
+    "name": "6October",
+    "arabicName": "السادس من الكتوبر"
+  },
+  {
+    "country": "EG",
+    "name": "Zefta",
+    "arabicName": "زفتي"
+  },
+  {
+    "country": "EG",
+    "name": "Toukh",
+    "arabicName": "طوخ"
+  },
+  {
+    "country": "EG",
+    "name": "Tanta",
+    "arabicName": "طنطا"
+  },
+  {
+    "country": "EG",
+    "name": "Tamiyah",
+    "arabicName": "طامية"
+  },
+  {
+    "country": "EG",
+    "name": "Talkha",
+    "arabicName": "طلخة"
+  },
+  {
+    "country": "EG",
+    "name": "Tala",
+    "arabicName": "تلا"
+  },
+  {
+    "country": "EG",
+    "name": "Tahta",
+    "arabicName": "طهطا"
+  },
+  {
+    "country": "EG",
+    "name": "Sohag",
+    "arabicName": "سوهاج"
+  },
+  {
+    "country": "EG",
+    "name": "Siwa Oasis",
+    "arabicName": "واحة سيوه"
+  },
+  {
+    "country": "EG",
+    "name": "Sidi Salim",
+    "arabicName": "سيدي سالم"
+  },
+  {
+    "country": "EG",
+    "name": "Shirbin",
+    "arabicName": "شربين"
+  },
+  {
+    "country": "EG",
+    "name": "Shibin al Qanatir",
+    "arabicName": "شبين القناطر"
+  },
+  {
+    "country": "EG",
+    "name": "Shibin al Kawm",
+    "arabicName": "شبين الكوم"
+  },
+  {
+    "country": "EG",
+    "name": "Sharm el-Sheikh",
+    "arabicName": "شرم الشيخ"
+  },
+  {
+    "country": "EG",
+    "name": "Samannud",
+    "arabicName": "سمنود"
+  },
+  {
+    "country": "EG",
+    "name": "Samaluţ",
+    "arabicName": "سمالوط"
+  },
+  {
+    "country": "EG",
+    "name": "Rosetta",
+    "arabicName": "رشيد"
+  },
+  {
+    "country": "EG",
+    "name": "Ras Gharib",
+    "arabicName": "راس غالب"
+  },
+  {
+    "country": "EG",
+    "name": "Rafah",
+    "arabicName": "رفح"
+  },
+  {
+    "country": "EG",
+    "name": "Quwaysina",
+    "arabicName": "قويسنا"
+  },
+  {
+    "country": "EG",
+    "name": "Quţur",
+    "arabicName": "قطور"
+  },
+  {
+    "country": "EG",
+    "name": "Kousa",
+    "arabicName": "كوسا"
+  },
+  {
+    "country": "EG",
+    "name": "Qina",
+    "arabicName": "قنا"
+  },
+  {
+    "country": "EG",
+    "name": "Qaşr al Farafirah",
+    "arabicName": "قصر الفرافرة"
+  },
+  {
+    "country": "EG",
+    "name": "Qalyub",
+    "arabicName": "قليوب"
+  },
+  {
+    "country": "EG",
+    "name": "Nuwaybi‘a",
+    "arabicName": "تويبع"
+  },
+  {
+    "country": "EG",
+    "name": "Naja' Ḥammādī",
+    "arabicName": "نجع حمادي"
+  },
+  {
+    "country": "EG",
+    "name": "Minyat an Naşr",
+    "arabicName": "منية النصر"
+  },
+  {
+    "country": "EG",
+    "name": "Munūf",
+    "arabicName": "منوف"
+  },
+  {
+    "country": "EG",
+    "name": "Matay",
+    "arabicName": "ماتاي"
+  },
+  {
+    "country": "EG",
+    "name": "Mashtūl as Sūq",
+    "arabicName": "مشتول السوق"
+  },
+  {
+    "country": "EG",
+    "name": "Mersa Matruh",
+    "arabicName": "مرسى مطروح"
+  },
+  {
+    "country": "EG",
+    "name": "Marsa Alam",
+    "arabicName": "مرسى علم"
+  },
+  {
+    "country": "EG",
+    "name": "Manfalūţ",
+    "arabicName": "منفالوط"
+  },
+  {
+    "country": "EG",
+    "name": "Ash Shaykh Zuwayd",
+    "arabicName": "الشيخ زويد"
+  },
+  {
+    "country": "EG",
+    "name": "Kawm Umbū",
+    "arabicName": "كوم امبو"
+  },
+  {
+    "country": "EG",
+    "name": "Kawm Ḩamādah",
+    "arabicName": "كوم حماده"
+  },
+  {
+    "country": "EG",
+    "name": "Kafr Şaqr",
+    "arabicName": "كفر صقر"
+  },
+  {
+    "country": "EG",
+    "name": "Kafr az Zayyāt",
+    "arabicName": "كفر الزيات"
+  },
+  {
+    "country": "EG",
+    "name": "Kafr ash Shaykh",
+    "arabicName": "كفر الشيخ"
+  },
+  {
+    "country": "EG",
+    "name": "Kafr ad Dawwār",
+    "arabicName": "كفر الدوار"
+  },
+  {
+    "country": "EG",
+    "name": "Juhaynah",
+    "arabicName": "جهينه"
+  },
+  {
+    "country": "EG",
+    "name": "Jirjā",
+    "arabicName": "جرجا"
+  },
+  {
+    "country": "EG",
+    "name": "‘Izbat al Burj",
+    "arabicName": "عزبة البرج"
+  },
+  {
+    "country": "EG",
+    "name": "Idkū",
+    "arabicName": "ادكو"
+  },
+  {
+    "country": "EG",
+    "name": "Idfū",
+    "arabicName": "ادفو"
+  },
+  {
+    "country": "EG",
+    "name": "Ibshawāy",
+    "arabicName": "ابشواي"
+  },
+  {
+    "country": "EG",
+    "name": "Halwan",
+    "arabicName": "حلوان"
+  },
+  {
+    "country": "EG",
+    "name": "Hihyā",
+    "arabicName": "ههيا"
+  },
+  {
+    "country": "EG",
+    "name": "Ḩawsh ‘Īsá",
+    "arabicName": "حوش عيسي"
+  },
+  {
+    "country": "EG",
+    "name": "Fuwwah",
+    "arabicName": "فوح"
+  },
+  {
+    "country": "EG",
+    "name": "Farshūţ",
+    "arabicName": "فرشو"
+  },
+  {
+    "country": "EG",
+    "name": "Fāqūs",
+    "arabicName": "فاقوس"
+  },
+  {
+    "country": "EG",
+    "name": "Damietta",
+    "arabicName": "دمياط"
+  },
+  {
+    "country": "EG",
+    "name": "Diyarb Najm",
+    "arabicName": "ديرب نجم"
+  },
+  {
+    "country": "EG",
+    "name": "Disūq",
+    "arabicName": "دسوق"
+  },
+  {
+    "country": "EG",
+    "name": "Dishnā",
+    "arabicName": "دشنا"
+  },
+  {
+    "country": "EG",
+    "name": "Dikirnis",
+    "arabicName": "دكرنس"
+  },
+  {
+    "country": "EG",
+    "name": "Dahab",
+    "arabicName": "دهب"
+  },
+  {
+    "country": "EG",
+    "name": "Dayrūţ",
+    "arabicName": "ديروط"
+  },
+  {
+    "country": "EG",
+    "name": "Damanhūr",
+    "arabicName": "دمنهور"
+  },
+  {
+    "country": "EG",
+    "name": "Port Said",
+    "arabicName": "بورسعيد"
+  },
+  {
+    "country": "EG",
+    "name": "Safaga",
+    "arabicName": "سافاجا"
+  },
+  {
+    "country": "EG",
+    "name": "Bilqās",
+    "arabicName": "بلقاس"
+  },
+  {
+    "country": "EG",
+    "name": "Bilbays",
+    "arabicName": "بلبيس"
+  },
+  {
+    "country": "EG",
+    "name": "Basyūn",
+    "arabicName": "بسيون"
+  },
+  {
+    "country": "EG",
+    "name": "Banī Suwayf",
+    "arabicName": "بني سويف"
+  },
+  {
+    "country": "EG",
+    "name": "Banhā",
+    "arabicName": "بنها"
+  },
+  {
+    "country": "EG",
+    "name": "Zagazig",
+    "arabicName": "الزقازيق"
+  },
+  {
+    "country": "EG",
+    "name": "El-Tor",
+    "arabicName": "الطور"
+  },
+  {
+    "country": "EG",
+    "name": "At Tall al Kabīr",
+    "arabicName": "التل الكبير"
+  },
+  {
+    "country": "EG",
+    "name": "Asyūţ",
+    "arabicName": "اسيوط"
+  },
+  {
+    "country": "EG",
+    "name": "Aswan",
+    "arabicName": "اسوان"
+  },
+  {
+    "country": "EG",
+    "name": "Suez",
+    "arabicName": "السويس"
+  },
+  {
+    "country": "EG",
+    "name": "Aş Şaff",
+    "arabicName": "الصف"
+  },
+  {
+    "country": "EG",
+    "name": "Ash Shuhadā’",
+    "arabicName": "الشهداء"
+  },
+  {
+    "country": "EG",
+    "name": "Ashmūn",
+    "arabicName": "اشمون"
+  },
+  {
+    "country": "EG",
+    "name": "Al Wāsiţah",
+    "arabicName": "الواسطة"
+  },
+  {
+    "country": "EG",
+    "name": "Luxor",
+    "arabicName": "الاقصر"
+  },
+  {
+    "country": "EG",
+    "name": "Al Quşayr",
+    "arabicName": "القصير"
+  },
+  {
+    "country": "EG",
+    "name": "Al Qurayn",
+    "arabicName": "القرين"
+  },
+  {
+    "country": "EG",
+    "name": "Al Qanāyāt",
+    "arabicName": "القنايات"
+  },
+  {
+    "country": "EG",
+    "name": "Al Qanāţir al Khayrīyah",
+    "arabicName": "القناطر الخيرية"
+  },
+  {
+    "country": "EG",
+    "name": "Cairo",
+    "arabicName": "القاهرة"
+  },
+  {
+    "country": "EG",
+    "name": "Al Minyā",
+    "arabicName": "المنيا"
+  },
+  {
+    "country": "EG",
+    "name": "Al Maţarīyah",
+    "arabicName": "المطرية"
+  },
+  {
+    "country": "EG",
+    "name": "Al Manzalah",
+    "arabicName": "المنزله"
+  },
+  {
+    "country": "EG",
+    "name": "Al Manşūrah",
+    "arabicName": "المنصورة"
+  },
+  {
+    "country": "EG",
+    "name": "Al Manshāh",
+    "arabicName": "المنشأه"
+  },
+  {
+    "country": "EG",
+    "name": "Al Maḩallah al Kubrá",
+    "arabicName": "المحلة الكبري"
+  },
+  {
+    "country": "EG",
+    "name": "Al Khārijah",
+    "arabicName": "الخارجة"
+  },
+  {
+    "country": "EG",
+    "name": "Al Khānkah",
+    "arabicName": "الخانكة"
+  },
+  {
+    "country": "EG",
+    "name": "Giza",
+    "arabicName": "الجيزة"
+  },
+  {
+    "country": "EG",
+    "name": "Al Jammālīyah",
+    "arabicName": "الجمالية"
+  },
+  {
+    "country": "EG",
+    "name": "Ismailia",
+    "arabicName": "الاسماعيلية"
+  },
+  {
+    "country": "EG",
+    "name": "Alexandria",
+    "arabicName": "الاسكندرية"
+  },
+  {
+    "country": "EG",
+    "name": "Al Ibrāhīmīyah",
+    "arabicName": "الابراهيمية"
+  },
+  {
+    "country": "EG",
+    "name": "Al Ḩawāmidīyah",
+    "arabicName": "الحوامدية"
+  },
+  {
+    "country": "EG",
+    "name": "Hurghada",
+    "arabicName": "الغردقه"
+  },
+  {
+    "country": "EG",
+    "name": "Al Fayyūm",
+    "arabicName": "الفيوم"
+  },
+  {
+    "country": "EG",
+    "name": "Al Fashn",
+    "arabicName": "الفشن"
+  },
+  {
+    "country": "EG",
+    "name": "Al Bājūr",
+    "arabicName": "الباجور"
+  },
+  {
+    "country": "EG",
+    "name": "Al Badārī",
+    "arabicName": "البداري"
+  },
+  {
+    "country": "EG",
+    "name": "Al ‘Ayyāţ",
+    "arabicName": "العياط"
+  },
+  {
+    "country": "EG",
+    "name": "Arish",
+    "arabicName": "العريش"
+  },
+  {
+    "country": "EG",
+    "name": "Al ‘Alamayn",
+    "arabicName": "العالمين"
+  },
+  {
+    "country": "EG",
+    "name": "Akhmīm",
+    "arabicName": "اخميم"
+  },
+  {
+    "country": "EG",
+    "name": "Ajā",
+    "arabicName": "اجا"
+  },
+  {
+    "country": "EG",
+    "name": "Ad Dilinjāt",
+    "arabicName": "الدلنجات"
+  },
+  {
+    "country": "EG",
+    "name": "Abū Tīj",
+    "arabicName": "ابو توج"
+  },
+  {
+    "country": "EG",
+    "name": "Abu Simbel",
+    "arabicName": "ابو سمبل"
+  },
+  {
+    "country": "EG",
+    "name": "Abū Qurqāş",
+    "arabicName": "ابو قرقاس"
+  },
+  {
+    "country": "EG",
+    "name": "Abū Kabīr",
+    "arabicName": "ابو كبير"
+  },
+  {
+    "country": "EG",
+    "name": "Abū al Maţāmīr",
+    "arabicName": "ابو المتامير"
+  },
+  {
+    "country": "EG",
+    "name": "Abnūb",
+    "arabicName": "ابانوب"
+  },
+  {
+    "country": "EG",
+    "name": "Bi’r al ‘Abd",
+    "arabicName": "بئر العبد"
+  },
+  {
+    "country": "EG",
+    "name": "Az Zarqā",
+    "arabicName": "الزرقا"
+  },
+  {
+    "country": "EG",
+    "name": "El Gouna",
+    "arabicName": "الجونة"
+  },
+  {
+    "country": "EG",
+    "name": "Makadi Bay",
+    "arabicName": "خليج مكادي"
+  },
+  {
+    "country": "EG",
+    "name": "Ain Sukhna",
+    "arabicName": "العين السخنة"
+  },
+  {
+    "country": "EG",
+    "name": "New Cairo",
+    "arabicName": "القاهرة الجديدة"
+  },
+  {
+    "country": "EG",
+    "name": "Beheira",
+    "arabicName": "البحيره"
+  },
+  {
+    "country": "EG",
+    "name": "Saint Catherine",
+    "arabicName": "سانت كاترين"
+  }
+]

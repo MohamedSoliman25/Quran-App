@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:backgroundTint="@null"
+        android:background="@color/light_palette"
+        >
+        <RelativeLayout
+            android:id="@+id/linear_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff5f5f5"
+            android:padding="8dp"
+            >
+
+            <ImageView
+                android:id="@+id/zekr_item_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_content_copy"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zekr_item_count"
+                    android:textColor="@color/dark_palette"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="مرتين"
+                    android:layout_centerInParent="true"
+                    />
+
+            <ImageView
+                android:id="@+id/zekr_item_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_share"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                />
+
+            </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_top2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_top"
+            android:layout_marginTop="10dp"
+            app:backgroundTint="@null"
+            android:background="@color/light_palette"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zekr_item_name"
+                android:layout_margin="5dp"
+                android:layout_alignParentEnd="true"
+                android:textSize="28sp"
+                android:text="الذكر"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                android:textColor="@color/dark_palette"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_top2"
+            app:backgroundTint="@null"
+            android:background="@color/light_palette"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:backgroundTint="@null"
+                android:background="@color/dark_palette"
+                />
+            <TextView
+                android:id="@+id/zekr_item_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_alignParentEnd="true"
+                android:textSize="24sp"
+                android:text="الوصف"
+                android:textIsSelectable="true"
+                android:textColor="@color/dark_palette"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

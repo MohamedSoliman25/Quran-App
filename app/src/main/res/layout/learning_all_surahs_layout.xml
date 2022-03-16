@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="@dimen/cardview_default_radius"
+    android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+            android:background="@color/light_palette"
+            >
+            <RelativeLayout
+                android:id="@+id/layout_number"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_islamic_img"
+                android:layout_alignParentRight="true"
+                android:layout_marginHorizontal="8dp"
+                >
+            <TextView
+                android:id="@+id/tv_surahs_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="18sp"
+                android:textColor="@color/dark_palette"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_surahs_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الفاتحه"
+                android:layout_toLeftOf="@id/layout_number"
+                android:textColor="@color/dark_palette"
+                android:textStyle="bold"
+                android:layout_marginEnd="6dp"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_arrow_left"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                />
+        </RelativeLayout>
+</androidx.cardview.widget.CardView>

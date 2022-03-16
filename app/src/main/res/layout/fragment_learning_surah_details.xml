@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.LearningSurahDetailsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/mosque"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/surah_details_surah_name"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_palette"
+                android:textAlignment="center"
+                android:layout_margin="4dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/surah_details_number_of_verses"
+                android:layout_below="@id/surah_details_surah_name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_palette"
+                android:textAlignment="center"
+                android:layout_margin="4dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/surah_details_meccan"
+                android:layout_below="@id/surah_details_number_of_verses"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_palette"
+                android:textAlignment="center"
+                android:layout_margin="4dp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_surahs_details"
+        />
+
+</LinearLayout>

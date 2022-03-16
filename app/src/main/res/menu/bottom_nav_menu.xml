@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/quranHomeFragment"
+        android:title="القرآن"
+        android:icon="@drawable/quran"
+        />
+    <item
+        android:id="@+id/AzkarHomeFragment"
+        android:title="الاذكار"
+        android:icon="@drawable/praying"
+        />
+    <item
+        android:id="@+id/prayerTimesFragment"
+        android:title="مواقيت الصلاة"
+        android:icon="@drawable/time"
+        />
+    <item
+        android:id="@+id/misbahaFragment"
+        android:title="السبحة"
+        android:icon="@drawable/tasbih"
+        />
+    <item
+        android:id="@+id/qiblaFragment"
+        android:title="القبلة"
+        android:icon="@drawable/qibla_direction"
+        />
+
+
+</menu>
