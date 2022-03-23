@@ -7,13 +7,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.quranapp.R;
-import com.example.quranapp.fragments.QuranSearchFragmentDirections;
-import com.example.quranapp.readingquranmodel.Aya;
+import com.example.quranapp.pojo.readingquranmodel.Aya;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -68,9 +66,9 @@ public class QuranSearchAdapter extends RecyclerView.Adapter<QuranSearchAdapter.
             ayaNo.setText(nf.format(aya.getAya_no()));
             soraName.setText(aya.getSora_name_ar());
             ayaContent.setText(aya.getAya_text());
-            itemView.setOnClickListener(v->{
-                NavHostFragment.findNavController(fragment).navigate(QuranSearchFragmentDirections.actionQuranSearchFragmentToQuranFragment(aya.getPage()));
-            });
+//            itemView.setOnClickListener(v->{
+//                NavHostFragment.findNavController(fragment).navigate(QuranSearchFragmentDirections.actionQuranSearchFragmentToQuranFragment(aya.getPage()));
+//            });
         }
     }
 }

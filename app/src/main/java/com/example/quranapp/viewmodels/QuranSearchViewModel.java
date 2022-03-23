@@ -1,7 +1,6 @@
 package com.example.quranapp.viewmodels;
 
 import android.app.Application;
-import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -9,7 +8,7 @@ import androidx.lifecycle.AndroidViewModel;
 
 import com.example.quranapp.database.QuranDao;
 import com.example.quranapp.database.QuranDatabase;
-import com.example.quranapp.readingquranmodel.Aya;
+import com.example.quranapp.pojo.readingquranmodel.Aya;
 
 import java.util.ArrayList;
 

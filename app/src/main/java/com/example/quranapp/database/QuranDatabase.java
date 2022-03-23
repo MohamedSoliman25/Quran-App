@@ -6,7 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.quranapp.readingquranmodel.Aya;
+import com.example.quranapp.pojo.readingquranmodel.Aya;
 
 
 @Database(entities = {Aya.class}, version = 1)

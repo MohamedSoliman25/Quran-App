@@ -73,23 +73,21 @@
             app:destination="@id/learningQuranFragment" />
         <action
             android:id="@+id/action_quranHomeFragment_to_readingQuranFragment"
-            app:destination="@id/quranIndexFragment" />
+            app:destination="@id/readingQuranFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/quranIndexFragment"
-        android:name="com.example.quranapp.fragments.QuranIndexFragment"
-        android:label="fragment_quran_index"
-        tools:layout="@layout/fragment_quran_index" >
+        android:id="@+id/readingQuranFragment"
+        android:name="com.example.quranapp.fragments.ReadingQuranFragment"
+        android:label="fragment__reading_quran"
+        tools:layout="@layout/fragment_reading_quran" >
+
         <action
-            android:id="@+id/action_quranIndex_to_quranFragment"
-            app:destination="@id/quranFragment" />
-        <action
-            android:id="@+id/action_quranIndexFragment_to_quranSearchFragment"
+            android:id="@+id/action_readingQuranFragment_to_quranSearchFragment"
             app:destination="@id/quranSearchFragment" />
         <action
-            android:id="@+id/action_quranIndexFragment_to_quranSearchFragment2"
-            app:destination="@id/quranSearchFragment" />
+            android:id="@+id/action_readingQuranFragment_to_readingQuranDetailsFragment"
+            app:destination="@id/readingQuranDetailsFragment" />
     </fragment>
 
     <fragment
@@ -97,16 +95,17 @@
         android:name="com.example.quranapp.fragments.QuranSearchFragment"
         android:label="@string/quran_search"
         tools:layout="@layout/fragment_quran_search">
+
         <action
-            android:id="@+id/action_quranSearchFragment_to_quranFragment"
-            app:destination="@id/quranFragment" />
+            android:id="@+id/action_quranSearchFragment_to_readingQuranDetailsFragment"
+            app:destination="@id/readingQuranDetailsFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/quranFragment"
-        android:name="com.example.quranapp.fragments.QuranContainerFragment"
+        android:id="@+id/readingQuranDetailsFragment"
+        android:name="com.example.quranapp.fragments.ReadingQuranDetailsFragment"
         android:label="@string/holy_quran"
-        tools:layout="@layout/fragment_page_quran">
+        tools:layout="@layout/fragment_reading_quran_details">
         <argument
             android:name="startPage"
             app:argType="integer" />

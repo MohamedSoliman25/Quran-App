@@ -19,7 +19,7 @@ import android.widget.EditText;
 
 import com.example.quranapp.R;
 import com.example.quranapp.adapters.QuranSearchAdapter;
-import com.example.quranapp.readingquranmodel.Aya;
+import com.example.quranapp.pojo.readingquranmodel.Aya;
 import com.example.quranapp.viewmodels.QuranSearchViewModel;
 
 import java.util.ArrayList;

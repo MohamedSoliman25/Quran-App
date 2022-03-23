@@ -17,21 +17,20 @@ import com.example.quranapp.R;
 import com.example.quranapp.viewmodels.QuranViewModel;
 
 
-public class QuranPageFragment extends Fragment {
+public class ReadingQuranDetailsFragment extends Fragment {
 
     private ImageView imageView;
     private QuranViewModel quranViewModel;
-    private final int pageNumber;
 
-    public QuranPageFragment(int pageNumber) {
-        this.pageNumber = pageNumber;
+    public ReadingQuranDetailsFragment() {
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         quranViewModel = new ViewModelProvider(this).get(QuranViewModel.class);
-        return inflater.inflate(R.layout.fragment_page_quran, container, false);
+        return inflater.inflate(R.layout.fragment_reading_quran_details, container, false);
 
     }
 
@@ -39,7 +38,7 @@ public class QuranPageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         imageView = view.findViewById(R.id.quran_page);
-        Drawable quranPage = quranViewModel.getQuranImageByPageNumber(pageNumber);
-        imageView.setImageDrawable(quranPage);
+//        Drawable quranPage = quranViewModel.getQuranImageByPageNumber(pageNumber);
+//        imageView.setImageDrawable(quranPage);
     }
 }

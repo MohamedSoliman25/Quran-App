@@ -1,4 +1,4 @@
-package com.example.quranapp.readingquranmodel;
+package com.example.quranapp.pojo.readingquranmodel;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;

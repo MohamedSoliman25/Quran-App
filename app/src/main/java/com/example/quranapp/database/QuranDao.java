@@ -4,11 +4,14 @@ import androidx.room.Dao;
 import androidx.room.Query;
 
 
-import com.example.quranapp.readingquranmodel.Aya;
-import com.example.quranapp.readingquranmodel.Jozz;
-import com.example.quranapp.readingquranmodel.Sora;
+import com.example.quranapp.pojo.readingquranmodel.Aya;
+import com.example.quranapp.pojo.readingquranmodel.Jozz;
+import com.example.quranapp.pojo.readingquranmodel.Sora;
 
 import java.util.List;
+
+import io.reactivex.Observable;
+import io.reactivex.Single;
 
 @Dao
 public interface QuranDao {
@@ -26,4 +29,7 @@ public interface QuranDao {
 
     @Query("SELECT * FROM quran WHERE aya_text_emlaey LIKE '%' || :keyword || '%'")
     List<Aya> getAyaBySubText(String keyword);
+
+    @Query("SELECT  *  FROM quran GROUP BY sora")
+    Single<List<Aya>> getAllSoras();
 }

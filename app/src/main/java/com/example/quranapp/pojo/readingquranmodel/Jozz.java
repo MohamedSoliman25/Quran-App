@@ -1,4 +1,4 @@
-package com.example.quranapp.readingquranmodel;
+package com.example.quranapp.pojo.readingquranmodel;
 
 public class Jozz {
     int jozzNumber,startPage,endPage;
