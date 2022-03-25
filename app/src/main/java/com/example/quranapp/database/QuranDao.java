@@ -27,7 +27,10 @@ public interface QuranDao {
     Jozz getJozzByNumber(int jozzNumber);
 
 
-    @Query("SELECT * FROM quran WHERE aya_text_emlaey LIKE '%' || :keyword || '%'")
+    // for searching about aya (original)
+//    @Query("SELECT * FROM quran WHERE aya_text_emlaey LIKE '%' || :keyword || '%'")
+//    List<Aya> getAyaBySubText(String keyword);
+    @Query("SELECT * FROM quran WHERE sora_name_ar LIKE '%' || :keyword || '%'")
     List<Aya> getAyaBySubText(String keyword);
 
     @Query("SELECT  *  FROM quran GROUP BY sora")
