@@ -1,16 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_gravity="top"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".fragments.ReadingQuranDetailsFragment">
 
-    <ImageView
-        android:scaleType="fitXY"
-        android:layout_gravity="center"
-        android:id="@+id/quran_page"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
-</FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_original_sora_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_bold"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/dark_palette"
+            android:shadowColor="@color/mid_palette"
+            android:layout_alignParentTop="true"
+            android:shadowDx="-2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:textSize="24sp" />
+        <RelativeLayout
+            android:id="@+id/rv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_below="@id/tv_original_sora_name"
+            >
+                <Button
+                    android:id="@+id/down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تصغير الخط"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    />
+
+                <Button
+                    android:id="@+id/up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تكبير الخط"
+                    android:textSize="18sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvStatic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_layout"
+            android:fontFamily="@font/changa_bold"
+            android:text="بسم الله الرحمن الرحيم"
+            android:gravity="center"
+            android:textColor="@color/dark_palette"
+            android:shadowColor="@color/mid_palette"
+            android:shadowDx="-2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:textSize="22sp" />
+
+        <ScrollView
+            android:layout_below="@id/tvStatic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reading_quran_details_tv"
+            android:layout_gravity="end"
+            android:layout_margin="12dp"
+            android:textColor="@color/dark_palette"
+            android:textSize="22sp"
+            />
+        </ScrollView>
+
+</RelativeLayout>

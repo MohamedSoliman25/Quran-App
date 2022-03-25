@@ -4,7 +4,7 @@ public class Sora {
 
     int soraNumber, startPage, endPage;
 
-    String arabicName, englishName;
+    String arabicName, englishName,ayaText,ayaTextEmlaey;
 
     public int getSoraNumber() {
         return soraNumber;
@@ -20,6 +20,22 @@ public class Sora {
 
     public void setStartPage(int startPage) {
         this.startPage = startPage;
+    }
+
+    public String getAyaText() {
+        return ayaText;
+    }
+
+    public void setAyaText(String ayaText) {
+        this.ayaText = ayaText;
+    }
+
+    public String getAyaTextEmlaey() {
+        return ayaTextEmlaey;
+    }
+
+    public void setAyaTextEmlaey(String ayaTextEmlaey) {
+        this.ayaTextEmlaey = ayaTextEmlaey;
     }
 
     public int getEndPage() {

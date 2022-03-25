@@ -32,4 +32,13 @@ public interface QuranDao {
 
     @Query("SELECT  *  FROM quran GROUP BY sora")
     Single<List<Aya>> getAllSoras();
+
+//    @Query("SELECT sora as soraNumber, MIN(page) as startPage ,MAX(page) as endPage ,sora_name_ar as arabicName,sora_name_en as englishName,aya_text as ayaText,aya_text_emlaey as ayaTextEmlaey FROM quran WHERE sora = :soraNumber")
+//    Observable<List<Sora>> getAllSoraDetails(int soraNumber);
+
+    @Query("SELECT  *  FROM quran  WHERE sora = :soraNumber")
+    Observable<List<Aya>> getAllSorasDetails(int soraNumber);
+
+
+
 }

@@ -107,7 +107,7 @@
         android:label="@string/holy_quran"
         tools:layout="@layout/fragment_reading_quran_details">
         <argument
-            android:name="startPage"
+            android:name="soraNumber"
             app:argType="integer" />
     </fragment>
 </navigation>

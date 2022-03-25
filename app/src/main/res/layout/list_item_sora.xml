@@ -1,85 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:layout_margin="8dp"
-    android:layoutDirection="rtl">
+    app:cardCornerRadius="8dp"
+    app:cardElevation="@dimen/cardview_default_radius"
+    android:layout_height="wrap_content">
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
+        app:backgroundTint="@null"
+        android:background="@color/light_palette"
+        >
+        <RelativeLayout
+            android:id="@+id/layout_number"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_islamic_img"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="8dp"
+            >
             <TextView
-                android:id="@+id/sora_number"
+                android:id="@+id/reading_quran_sora_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1-"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/sora_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="Al-fatihah"
-                android:textSize="24sp" />
-        </LinearLayout>
-
-        <LinearLayout
+                android:textSize="18sp"
+                android:textColor="@color/dark_palette"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/reading_quran_sora_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/word_from"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:text="@string/from_page"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/sora_start"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="1"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/word_to"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:text="@string/to"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/sora_end"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="52"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_toLeftOf="@id/layout_number"
+            android:textColor="@color/dark_palette"
+            android:textStyle="bold"
+            android:layout_marginEnd="6dp"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_left"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

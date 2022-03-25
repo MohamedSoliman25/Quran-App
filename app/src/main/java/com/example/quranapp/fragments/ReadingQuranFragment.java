@@ -58,7 +58,7 @@ public class ReadingQuranFragment extends Fragment {
         rv = view.findViewById(R.id.sora_list);
         search = view.findViewById(R.id.search_quran_edit_text);
         readingQuranAdapter = new ReadingQuranAdapter(this);
-        rv.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
+//        rv.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
         rv.setAdapter(readingQuranAdapter);
 
 //        viewModel.getAllSoras().observe(getViewLifecycleOwner(), new Observer<Sora>() {
@@ -75,6 +75,7 @@ public class ReadingQuranFragment extends Fragment {
                 readingQuranAdapter.setSoraList(ayas);
             }
         });
+
 
 
 

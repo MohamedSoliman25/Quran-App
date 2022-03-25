@@ -7,10 +7,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.quranapp.R;
+import com.example.quranapp.fragments.ReadingQuranFragmentDirections;
 import com.example.quranapp.pojo.readingquranmodel.Jozz;
 import com.example.quranapp.pojo.readingquranmodel.Aya;
 
@@ -52,62 +54,26 @@ public class ReadingQuranAdapter extends RecyclerView.Adapter<ReadingQuranAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView soraNumber, soraName, from, to, wordTo,wordFrom;
+        TextView soraNumber, soraName;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            soraNumber = itemView.findViewById(R.id.sora_number);
-            soraName = itemView.findViewById(R.id.sora_name);
-            from = itemView.findViewById(R.id.sora_start);
-            to = itemView.findViewById(R.id.sora_end);
-            wordFrom = itemView.findViewById(R.id.word_from);
-            wordTo = itemView.findViewById(R.id.word_to);
+            soraNumber = itemView.findViewById(R.id.reading_quran_sora_number);
+            soraName = itemView.findViewById(R.id.reading_quran_sora_name);
+
         }
 
         public void bind(Aya aya) {
             NumberFormat nf= NumberFormat.getInstance(new Locale("ar","EG"));
 
-            wordTo.setVisibility(View.VISIBLE);
-
-            soraNumber.setText((nf.format(aya.getSora())+"-"));
+            soraNumber.setText((nf.format(aya.getSora())));
             soraName.setText(aya.getSora_name_ar());
-//            from.setText(nf.format(sora.getStartPage()));
-//            to.setText(nf.format(sora.getEndPage()));
-//            itemView.setOnClickListener(v -> NavHostFragment
-//                    .findNavController(fragment)
-//                    .navigate(QuranIndexFragmentDirections.actionQuranIndexToQuranFragment(sora.getStartPage())));
+            itemView.setOnClickListener(v -> NavHostFragment
+                    .findNavController(fragment)
+                    .navigate(ReadingQuranFragmentDirections.actionReadingQuranFragmentToReadingQuranDetailsFragment(aya.getSora())));
         }
 
-        public void bind(Jozz jozz) {
-            NumberFormat nf= NumberFormat.getInstance(new Locale("ar","EG"));
 
-            soraName.setText((fragment.getString(R.string.jozz)+": "+(nf.format(jozz.getJozzNumber()))));
-            wordTo.setVisibility(View.VISIBLE);
-
-            soraNumber.setText("");
-            from.setText(nf.format(jozz.getStartPage()));
-            to.setText(nf.format(jozz.getEndPage()));
-
-//            itemView.setOnClickListener(v -> NavHostFragment
-//                    .findNavController(fragment)
-//                    .navigate(QuranIndexFragmentDirections.actionQuranIndexToQuranFragment(jozz.getStartPage())));
-        }
-
-        public void bind(Integer page) {
-            NumberFormat nf= NumberFormat.getInstance(new Locale("ar","EG"));
-
-            soraName.setText((fragment.getString(R.string.page)+" : "+(nf.format(page))));
-            from.setVisibility(View.GONE);
-            to.setVisibility(View.GONE);
-            wordTo.setVisibility(View.GONE);
-            wordFrom.setVisibility(View.GONE);
-//
-//            soraNumber.setText("");
-//
-//            itemView.setOnClickListener(v -> NavHostFragment
-//                    .findNavController(fragment)
-//                    .navigate(QuranIndexFragmentDirections.actionQuranIndexToQuranFragment(page)));
-        }
 
     }
 }
