@@ -28,11 +28,14 @@ public interface QuranDao {
 
 
     // for searching about aya (original)
-//    @Query("SELECT * FROM quran WHERE aya_text_emlaey LIKE '%' || :keyword || '%'")
-//    List<Aya> getAyaBySubText(String keyword);
-    @Query("SELECT * FROM quran WHERE sora_name_ar LIKE '%' || :keyword || '%'")
-    List<Aya> getAyaBySubText(String keyword);
+    @Query("SELECT * FROM quran WHERE aya_text_emlaey LIKE '%' || :keyword || '%'")
+    Observable<List<Aya>> getAyaBySubText(String keyword);
 
+    // for searching about sora name
+//    @Query("SELECT * FROM quran WHERE sora_name_ar LIKE '%' || :keyword || '%'")
+//    Observable<List<Aya>> getAyaBySubText(String keyword);
+
+    // i use group by for preventing repeated items
     @Query("SELECT  *  FROM quran GROUP BY sora")
     Single<List<Aya>> getAllSoras();
 

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +24,7 @@ import com.example.quranapp.pojo.readingquranmodel.Aya;
 import com.example.quranapp.viewmodels.QuranSearchViewModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class QuranSearchFragment extends Fragment {
@@ -63,8 +65,16 @@ public class QuranSearchFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                ArrayList<Aya> ayat = viewModel.getSearchResult(s.toString());
-                adapter.setAyat(ayat);
+                if(s.length()!=0){
+//                    ArrayList<Aya> ayat = viewModel.getSearchResult(s.toString());
+//                    adapter.setAyat(ayat);
+                    viewModel.getAyaBySubText(s.toString()).observe(getViewLifecycleOwner(), new Observer<List<Aya>>() {
+                        @Override
+                        public void onChanged(List<Aya> ayas) {
+                            adapter.setAyat(ayas);
+                        }
+                    });
+                }
             }
 
             @Override

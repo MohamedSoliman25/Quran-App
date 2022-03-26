@@ -15,11 +15,12 @@ import com.example.quranapp.pojo.readingquranmodel.Aya;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class QuranSearchAdapter extends RecyclerView.Adapter<QuranSearchAdapter.ViewHolder> {
 
-   private ArrayList<Aya> ayat;
+   private List<Aya> ayat = new ArrayList<>();
    private Fragment fragment;
 
     public QuranSearchAdapter(Fragment fragment) {
@@ -43,7 +44,7 @@ public class QuranSearchAdapter extends RecyclerView.Adapter<QuranSearchAdapter.
         return ayat==null ? 0 : ayat.size();
     }
 
-    public void setAyat(ArrayList<Aya> ayat) {
+    public void setAyat(List<Aya> ayat) {
         this.ayat = ayat;
         notifyDataSetChanged();
     }
