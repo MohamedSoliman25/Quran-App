@@ -138,11 +138,11 @@ public class AzkarListAdapter extends RecyclerView.Adapter<AzkarListAdapter.View
                         .newPlainText("Your OTP", copyText);
                 clipboard.setPrimaryClip(clip);
             }
-            Toast toast = Toast.makeText(context,
-                    "تم نسخ الذكر", Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.TOP| Gravity.RIGHT, 50, 50);
-            toast.show();
-            //displayAlert("Your OTP is copied");
+//            Toast toast = Toast.makeText(context,
+//                    "تم نسخ الذكر", Toast.LENGTH_SHORT);
+//            toast.setGravity(Gravity.TOP| Gravity.RIGHT, 50, 50);
+         //   toast.show();
+            Toast.makeText(context, "تم نسخ الذكر", Toast.LENGTH_SHORT).show();
         }
     }
 

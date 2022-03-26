@@ -3,6 +3,8 @@ package com.example.quranapp.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,12 +18,16 @@ import com.example.quranapp.fragments.AzkarHomeFragmentDirections;
 import com.example.quranapp.pojo.azkar.ZekrType;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 
-public class AzkarTypesAdapter extends RecyclerView.Adapter<AzkarTypesAdapter.ViewHolder> {
+public class AzkarTypesAdapter extends RecyclerView.Adapter<AzkarTypesAdapter.ViewHolder> implements Filterable {
 
    private ArrayList<ZekrType> azkarTypes;
    private Fragment fragment;
+    List<ZekrType> filteredList = new ArrayList<>();
+
 
     public AzkarTypesAdapter(Fragment fragment) {
         this.fragment = fragment;
@@ -45,7 +51,44 @@ public class AzkarTypesAdapter extends RecyclerView.Adapter<AzkarTypesAdapter.Vi
 
     public void setAzkarTypes(HashSet<ZekrType> azkarTypes) {
         this.azkarTypes = new ArrayList<>(azkarTypes);
+        filteredList.clear();
+        filteredList.addAll(azkarTypes);
         notifyDataSetChanged();
+    }
+
+    //this method for adding or assigning filteredList to original list for displaying data which user searched about it
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                List<ZekrType> filterListTemp = new ArrayList<>();
+
+                constraint = constraint.toString().trim();
+                azkarTypes.clear();
+                if (constraint==null ||constraint.length()==0){
+                    filterListTemp.addAll(filteredList);
+                }
+                else {
+                    for (ZekrType zekrType : filteredList){
+                        if (zekrType.getZekrName().contains(constraint)){
+                            filterListTemp.add(zekrType);
+                        }
+                    }
+                }
+                FilterResults results = new FilterResults();
+                results.values = filterListTemp;
+                return results;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+
+                azkarTypes.clear();
+                azkarTypes.addAll((Collection<? extends ZekrType>) results.values);
+                notifyDataSetChanged();
+            }
+        };
     }
 
     public  class ViewHolder extends RecyclerView.ViewHolder {
