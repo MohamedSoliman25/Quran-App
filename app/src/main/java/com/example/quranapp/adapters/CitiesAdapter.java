@@ -4,30 +4,41 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quranapp.R;
+import com.example.quranapp.pojo.azkar.ZekrType;
 import com.example.quranapp.pojo.prayertimes.City;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CitiesAdapter extends RecyclerView.Adapter<CitiesAdapter.ViewHolder> {
+public class CitiesAdapter extends RecyclerView.Adapter<CitiesAdapter.ViewHolder> implements Filterable {
 
 
-    private List<City> cities;
-    private final List<City> originalCities;
+    private List<City> cities = new ArrayList<>();
     private final OnClick onClick;
+     private List<City> filteredList = new ArrayList<>();
 
-    public CitiesAdapter(List<City> cities, OnClick onClick) {
-        this.cities = cities;
+
+    public CitiesAdapter( OnClick onClick) {
         this.onClick = onClick;
-        originalCities = new ArrayList<>(cities);
     }
+
+    public void setCities(List<City> cities) {
+        this.cities = cities;
+        filteredList.clear();
+        filteredList.addAll(cities);
+        notifyDataSetChanged();
+    }
+
 
     @NonNull
     @Override
@@ -45,23 +56,55 @@ public class CitiesAdapter extends RecyclerView.Adapter<CitiesAdapter.ViewHolder
         return cities == null ? 0 : cities.size();
     }
 
-    public void setCities(List<City> cities) {
-        this.cities = cities;
-        notifyDataSetChanged();
-    }
 
-    // i added Build.VERSION_CODES.N condition
-    public void filter(String s) {
-        if (s == null || s.isEmpty()) {
-            setCities(originalCities);
-        } else {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                setCities(originalCities
-                        .stream()
-                        .filter(city -> city.getCountry().contains(s) || city.getName().contains(s))
-                        .collect(Collectors.toCollection(ArrayList::new)));
+
+    // another way for search using collection
+//    public void filter(String s) {
+//        if (s == null || s.isEmpty()) {
+//            setCities(originalCities);
+//        } else {
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//                setCities(originalCities
+//                        .stream()
+//                        .filter(city -> city.getCountry().contains(s) || city.getName().contains(s))
+//                        .collect(Collectors.toCollection(ArrayList::new)));
+//            }
+//        }
+//    }
+
+    //this method for adding or assigning filteredList to original list for displaying data which user searched about it
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                List<City> filterListTemp = new ArrayList<>();
+
+                constraint = constraint.toString().trim();
+                cities.clear();
+                if (constraint==null ||constraint.length()==0){
+                    filterListTemp.addAll(filteredList);
+                }
+                else {
+                    for (City city : filteredList){
+                        if (city.getArabicName().contains(constraint)){
+                            filterListTemp.add(city);
+                        }
+                    }
+                }
+                FilterResults results = new FilterResults();
+                results.values = filterListTemp;
+                return results;
             }
-        }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+
+                cities.clear();
+                cities.addAll((Collection<? extends City>) results.values);
+                notifyDataSetChanged();
+            }
+        };
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

@@ -16,7 +16,7 @@
         android:layout_marginBottom="8dp"
         android:backgroundTint="@null"
         android:padding="8dp"
-        app:cardBackgroundColor="@color/white"
+        app:cardBackgroundColor="@color/light_palette"
         app:cardCornerRadius="25dp">
 
         <EditText

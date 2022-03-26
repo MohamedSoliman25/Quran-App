@@ -34,7 +34,7 @@ public class PrayerCityPickerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         viewModel = new ViewModelProvider(requireActivity()).get(PrayerTimesViewModel.class);
-        adapter = new CitiesAdapter(viewModel.getCities(), city -> {
+        adapter = new CitiesAdapter(city -> {
             viewModel.setCurrentCity(city);
             NavHostFragment.findNavController(this).navigateUp();
         });
@@ -47,6 +47,7 @@ public class PrayerCityPickerFragment extends Fragment {
         search = view.findViewById(R.id.search_cities);
         citiesList = view.findViewById(R.id.cities_list);
         citiesList.setAdapter(adapter);
+        adapter.setCities(viewModel.getCities());
         citiesList.addItemDecoration(new DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL));
 
         search.addTextChangedListener(new TextWatcher() {
@@ -57,8 +58,12 @@ public class PrayerCityPickerFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                adapter.filter(s.toString());
-            }
+//                adapter.filter(s.toString());
+                if(s.length()!=0) {
+                    adapter.getFilter().filter(s.toString());
+
+                }
+                }
 
             @Override
             public void afterTextChanged(Editable s) {
