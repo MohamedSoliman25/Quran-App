@@ -81,6 +81,7 @@
             android:id="@+id/reading_quran_details_tv"
             android:layout_gravity="end"
             android:layout_margin="12dp"
+            android:paddingBottom="16dp"
             android:textColor="@color/dark_palette"
             android:textSize="22sp"
             />
