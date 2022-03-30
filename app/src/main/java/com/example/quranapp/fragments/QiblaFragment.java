@@ -29,15 +29,15 @@ public class QiblaFragment extends Fragment {
 
 
         Intent intent = new Intent(getContext(), CompassActivity.class);
-        intent.putExtra(Constants.TOOLBAR_TITLE, "Quran App");		// Toolbar Title
-        intent.putExtra(Constants.TOOLBAR_BG_COLOR, R.color.mid_palette);		// Toolbar Background color
-        intent.putExtra(Constants.TOOLBAR_TITLE_COLOR, R.color.dark_palette);	// Toolbar Title color
-        intent.putExtra(Constants.COMPASS_BG_COLOR, R.color.light_palette);		// Compass background color
-        intent.putExtra(Constants.ANGLE_TEXT_COLOR, R.color.dark_palette);		// Angle Text color
+//        intent.putExtra(Constants.TOOLBAR_TITLE, "Quran App");		// Toolbar Title
+//        intent.putExtra(Constants.TOOLBAR_BG_COLOR, R.color.mid_palette);		// Toolbar Background color
+//        intent.putExtra(Constants.TOOLBAR_TITLE_COLOR, R.color.dark_palette);	// Toolbar Title color
+        intent.putExtra(Constants.COMPASS_BG_COLOR, "#FFFFFF");		// Compass background color
+        intent.putExtra(Constants.ANGLE_TEXT_COLOR, "#000000");		// Angle Text color
         intent.putExtra(Constants.DRAWABLE_DIAL, R.drawable.dial);	// Your dial drawable resource
         intent.putExtra(Constants.DRAWABLE_QIBLA, R.drawable.qibla); 	// Your qibla indicator drawable resource
-        intent.putExtra(Constants.FOOTER_IMAGE_VISIBLE, View.VISIBLE|View.INVISIBLE|View.GONE);	// Footer World Image visibility
-        intent.putExtra(Constants.LOCATION_TEXT_VISIBLE, View.VISIBLE|View.INVISIBLE|View.GONE); // Location Text visibility
+        intent.putExtra(Constants.FOOTER_IMAGE_VISIBLE, View.GONE);	// Footer World Image visibility
+        intent.putExtra(Constants.LOCATION_TEXT_VISIBLE, View.VISIBLE); // Location Text visibility
         startActivity(intent);
         getActivity().finish();
     }
