@@ -9,6 +9,7 @@ A Quran app ,allowing users to learn the Quran using reading and voice by dividi
 - REST API (Retrofit2)
 - RxJava
 - Room Database
+- Shared Preferences
 - Navigation Component
 - JSON
 - Work Manager
