@@ -7,12 +7,9 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 
-import com.example.quranapp.database.QuranDao;
-import com.example.quranapp.database.QuranDatabase;
 import com.example.quranapp.pojo.readingquranmodel.Aya;
 import com.example.quranapp.repository.ReadingQuranRepo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class QuranSearchViewModel extends AndroidViewModel {

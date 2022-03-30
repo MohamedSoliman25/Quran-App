@@ -11,7 +11,6 @@ import com.example.quranapp.database.QuranDao;
 import com.example.quranapp.database.QuranDatabase;
 import com.example.quranapp.pojo.readingquranmodel.Aya;
 import com.example.quranapp.pojo.readingquranmodel.Jozz;
-import com.example.quranapp.pojo.readingquranmodel.Sora;
 import com.example.quranapp.repository.ReadingQuranRepo;
 
 import java.util.ArrayList;

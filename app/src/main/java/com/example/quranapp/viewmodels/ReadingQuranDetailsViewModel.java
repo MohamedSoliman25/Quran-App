@@ -7,7 +7,6 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.example.quranapp.pojo.readingquranmodel.Aya;
-import com.example.quranapp.pojo.readingquranmodel.Sora;
 import com.example.quranapp.repository.ReadingQuranRepo;
 
 import java.util.List;
