@@ -30,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/linear"
+        android:id="@+id/linear2"
         android:orientation="horizontal"
         android:padding="8dp"
         android:layout_marginTop="-80dp"
@@ -50,9 +51,9 @@
                 android:gravity="center"
                 >
                 <ImageView
-                    android:layout_width="80dp"
+                    android:layout_width="70dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/quran"
+                    android:src="@drawable/learning_quran"
                     android:layout_margin="4dp"
 
                     />
@@ -86,9 +87,9 @@
                 android:gravity="center"
                 >
                 <ImageView
-                    android:layout_width="80dp"
+                    android:layout_width="70dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/quran"
+                    android:src="@drawable/reading_quran"
                     android:layout_margin="4dp"
                     />
                 <TextView
@@ -107,4 +108,12 @@
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear2"
+        app:lottie_rawRes="@raw/quran_animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 </RelativeLayout>
